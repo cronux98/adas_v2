@@ -1,0 +1,43 @@
+# Build artifacts
+*.o
+*.elf
+*.bin
+*.hex
+*.vvp
+*.vcd
+*.log
+build/
+
+# ORFS flow outputs (too large)
+flow/objects/
+flow/reports/
+flow/results/
+flow/logs/
+
+# Synthesis intermediates
+synth/*.json
+synth/*.blif
+synth/*.tcl
+synth/*.log
+!synth/SYNTHESIS_REPORT.md
+
+# Simulation results
+sim/results/
+sim/*.vcd
+
+# GDS binary (too large for git, reference only)
+gate/*.gds
+
+# Temporary and backup
+*.bak
+*.backup
+*~
+.*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Deliverable internal drafts
+deliverables/**/drafts/
+tb/sim_build/
