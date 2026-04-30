@@ -1,0 +1,38 @@
+# Build artifacts
+work/
+vsim.wlf
+cov_work/
+coverage_report/
+transcript
+*.vvp
+*.vcd
+*.lxt
+*.lxt2
+*.fst
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Firmware binaries
+*.elf
+*.bin
+*.o
+*.map
+*.dis
+
+# Synthesis
+*.lib
+*.lef
+*.def
+*.gds
+*.odb
+*.sdc.bak
+
+# Temp
+*~
+*.bak
+*.backup
+.DS_Store
