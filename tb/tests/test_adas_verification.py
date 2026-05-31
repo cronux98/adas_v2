@@ -522,7 +522,7 @@ def run_all_tests():
     """Run all ADAS verification tests."""
     print("=" * 70)
     print("  ADAS v2 — COMPREHENSIVE VERIFICATION SUITE")
-    print("  Hoshiyomi Directive: Reality == Expectation, every cycle")
+    print("  Verification Golden Rule: Reality == Expectation, every cycle")
     print("=" * 70)
 
     all_passed = True

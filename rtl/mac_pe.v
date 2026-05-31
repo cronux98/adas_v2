@@ -43,11 +43,11 @@ module mac_pe (
 
     // Weight loading
     input  wire        weight_load,    // load strobe during LOAD state
-    input  wire [7:0]  weight_data,    // INT8 signed weight value
+    input  wire signed [7:0]  weight_data,    // INT8 signed weight value
 
     // Data interface
-    input  wire [7:0]  activation_in,  // INT8 signed activation (broadcast from array ctrl)
-    input  wire [31:0] psum_in,        // INT32 partial sum from left neighbour (or 0 for col 0)
+    input  wire signed [7:0]  activation_in,  // INT8 signed activation (broadcast from array ctrl)
+    input  wire signed [31:0] psum_in,        // INT32 partial sum from left neighbour (or 0 for col 0)
     input  wire        enable,         // compute enable (asserted for this PE's compute cycle)
 
     // Outputs

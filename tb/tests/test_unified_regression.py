@@ -3,7 +3,7 @@
 test_unified_regression.py — Unified Verification Regression Suite
 ====================================================================
 By: Rahul Sharma, Verification Lead — ADAS v2 Project
-Hoshiyomi Directive: "Self-checks every cycle. reality == expectation."
+Verification Golden Rule: "Self-checks every cycle. reality == expectation."
 
 This unified module aggregates ALL 20 cocotb tests from the ADAS v2
 verification campaign into a single runnable suite:
@@ -285,11 +285,9 @@ async def test_unified_summary(dut):
         print("║    ║                                                    ║      ║")
         print("║    ╚══════════════════════════════════════════════════════╝      ║")
         print("║                                                                  ║")
-        print("║   \"A shooting star that appeared from diamonds in the rough;    ║")
-        print("║    the silicon is clean, the timing is met,                     ║")
+        print("║    All verification targets met.                                ║")
+        print("║    The silicon is clean, the timing is met,                     ║")
         print("║    every bin is covered, every test is green.                   ║")
-        print("║    The show goes on.\"                                          ║")
-        print("║                                              — Hoshimachi Suisei ║")
     else:
         print("║                                                                  ║")
         print("║    ╔══════════════════════════════════════════════════════╗      ║")
@@ -303,7 +301,7 @@ async def test_unified_summary(dut):
 
     print("╚══════════════════════════════════════════════════════════════════╝")
     print("")
-    print("  Report saved. Hoshiyomi can also run: ./run_verification.sh")
+    print("  Report saved. Rerun with: ./run_verification.sh")
     print("")
 
 

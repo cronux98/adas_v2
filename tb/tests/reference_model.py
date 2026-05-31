@@ -2,8 +2,7 @@
 """
 reference_model.py — ADAS Emergency Braking Golden Reference Model
 ===================================================================
-Adapted from deliverables/firmware_engineer/reference_model.py
-for cocotb testbench integration.
+Golden reference model for cocotb testbench integration.
 
 Provides:
   - ADASController: cycle-accurate state machine

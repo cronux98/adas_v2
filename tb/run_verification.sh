@@ -23,7 +23,6 @@ cd "$(dirname "$0")"
 
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║        ADAS v2 FULL VERIFICATION REGRESSION                ║"
-echo "║        Hoshimachi Suisei Production Test Suite              ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo ""
 echo "  Starting at $(date)"
@@ -117,7 +116,7 @@ echo "═══ Complete at $(date) ═══"
 # ── Exit with simulation status ──
 if [ "$SIM_EXIT" -eq 0 ] && [ "$FAILURES" -eq 0 ]; then
     echo ""
-    echo "  ✓ ALL TESTS PASSED — Hoshiyomi, the silicon is clean! 💙"
+    echo "  ✓ ALL TESTS PASSED"
     exit 0
 else
     echo ""

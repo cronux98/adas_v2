@@ -59,22 +59,22 @@ module systolic_array (
     input  wire        weight_wr,          // weight write strobe
     input  wire [1:0]  weight_row,         // PE row select [0..3]
     input  wire [1:0]  weight_col,         // PE column select [0..3]
-    input  wire [7:0]  weight_data,        // INT8 weight value
+    input  wire signed [7:0]  weight_data,        // INT8 weight value
 
     // Activation broadcast (driven during COMPUTE state)
-    input  wire [7:0]  activation_0,       // activation for column 0
-    input  wire [7:0]  activation_1,       // activation for column 1
-    input  wire [7:0]  activation_2,       // activation for column 2
-    input  wire [7:0]  activation_3,       // activation for column 3
+    input  wire signed [7:0]  activation_0,       // activation for column 0
+    input  wire signed [7:0]  activation_1,       // activation for column 1
+    input  wire signed [7:0]  activation_2,       // activation for column 2
+    input  wire signed [7:0]  activation_3,       // activation for column 3
 
     // Column compute enables (one-hot per compute cycle)
     input  wire [3:0]  col_enable,         // which column(s) compute this cycle
 
     // Outputs
-    output wire [31:0] result_0,           // output for row 0 (INT32)
-    output wire [31:0] result_1,           // output for row 1 (INT32)
-    output wire [31:0] result_2,           // output for row 2 (INT32)
-    output wire [31:0] result_3            // output for row 3 (INT32)
+    output wire signed [31:0] result_0,           // output for row 0 (INT32)
+    output wire signed [31:0] result_1,           // output for row 1 (INT32)
+    output wire signed [31:0] result_2,           // output for row 2 (INT32)
+    output wire signed [31:0] result_3            // output for row 3 (INT32)
 );
 
     // -------------------------------------------------------------------------
@@ -86,8 +86,8 @@ module systolic_array (
     //              Each PE in column j receives col_act[j]
     // Weight load: decoded from weight_row, weight_col
 
-    wire [31:0] psum_node [0:3][0:4];  // psum[i][0]=0, psum[i][4]=result[i]
-    wire [7:0]  wt_load_node [0:3][0:3];  // weight load data per PE
+    wire signed [31:0] psum_node [0:3][0:4];  // psum[i][0]=0, psum[i][4]=result[i]
+    wire signed [7:0]  wt_load_node [0:3][0:3];  // weight load data per PE
     wire        wt_load_en [0:3][0:3];     // weight load enable per PE
 
     // -------------------------------------------------------------------------
@@ -107,7 +107,7 @@ module systolic_array (
     //   However: each column needs its activation value present when enabled.
     //   We route activation_0..3 to columns 0..3 respectively.
     // -------------------------------------------------------------------------
-    wire [7:0] col_act [0:3];
+    wire signed [7:0] col_act [0:3];
     assign col_act[0] = activation_0;
     assign col_act[1] = activation_1;
     assign col_act[2] = activation_2;
