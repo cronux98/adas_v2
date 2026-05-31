@@ -101,3 +101,16 @@ openroad -no_init -exit run_pnr_direct.tcl   # full P&R flow
 This project is released under the [MIT License](LICENSE).
 
 The design uses the SkyWater 130 nm open-source PDK ([sky130hs](https://github.com/google/skywater-pdk)), which carries its own Apache 2.0 license.
+
+---
+
+## 📊 Physical Implementation Views
+
+Post-route layout images generated from the final 6_final.def using OpenROAD v2.0.
+
+| View | Image |
+|------|-------|
+| **Full Layout** — Complete post-route chip view with all routing layers, nets, and cells | ![Full Layout](images/layout_full.png) |
+| **Placement** — Cell placement density (routing hidden, cells only) | ![Placement](images/placement.png) |
+| **Congestion** — Routing layer view showing signal and power distribution | ![Congestion](images/congestion.png) |
+| **Clock Tree** — Clock net distribution across the die | ![Clock Tree](images/clock_tree.png) |
