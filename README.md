@@ -1,3 +1,7 @@
+> ⚠️ **Disclaimer:** This chip design was created through vibecoding — an agentic AI-driven methodology where AI agents collaboratively performed architecture, RTL design, verification, synthesis, and physical implementation. This is an experimental approach to silicon design. Review and validate before production use.
+
+---
+
 # AIP-001: ADAS v2 SoC — Advanced Driver Assistance System Controller
 
 **A safety-critical RISC-V System-on-Chip for automotive emergency braking applications, implemented in SkyWater 130 nm high-speed (sky130hs) technology.**

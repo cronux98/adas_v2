@@ -1,10 +1,10 @@
 # Direct P&R script — single OpenROAD session, ORFS v2.0-14726
 # David Chen, Backend Lead — 2026-04-29
 
-set scr /home/smdadmin/Desktop/openroad/OpenROAD-flow-scripts/flow/scripts
-set plat /home/smdadmin/Desktop/openroad/OpenROAD-flow-scripts/flow/platforms/sky130hs
-set res /home/smdadmin/Desktop/openroad/OpenROAD-flow-scripts/flow/results/sky130hs/adas_v2/base
-set rep /home/smdadmin/Desktop/openroad/OpenROAD-flow-scripts/flow/reports/sky130hs/adas_v2/base
+set scr ~/Desktop/openroad/OpenROAD-flow-scripts/flow/scripts
+set plat ~/Desktop/openroad/OpenROAD-flow-scripts/flow/platforms/sky130hs
+set res ~/Desktop/openroad/OpenROAD-flow-scripts/flow/results/sky130hs/adas_v2/base
+set rep ~/Desktop/openroad/OpenROAD-flow-scripts/flow/reports/sky130hs/adas_v2/base
 
 file mkdir $res
 file mkdir $rep
@@ -119,8 +119,8 @@ report_clock_skew
 report_checks -path_delay min_max -format full_clock_expanded -digits 3
 
 write_gds $res/6_final.gds
-exec mkdir -p /home/smdadmin/vlsi-team/shared/projects/adas_v2/gate
-exec cp $res/6_final.gds /home/smdadmin/vlsi-team/shared/projects/adas_v2/gate/adas_v2_final.gds
+exec mkdir -p ~/vlsi-team/shared/projects/adas_v2/gate
+exec cp $res/6_final.gds ~/vlsi-team/shared/projects/adas_v2/gate/adas_v2_final.gds
 
 puts "\n=== P&R FLOW COMPLETE: $res/6_final.gds ==="
 exit

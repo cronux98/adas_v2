@@ -1,8 +1,8 @@
 # Post-resize script: detailed_placement → CTS
 # OpenROAD v2.0-14726, sky130hs
 
-set plat /home/smdadmin/Desktop/openroad/OpenROAD-flow-scripts/flow/platforms/sky130hs
-set res /home/smdadmin/Desktop/openroad/OpenROAD-flow-scripts/flow/results/sky130hs/adas_v2/base
+set plat ~/Desktop/openroad/OpenROAD-flow-scripts/flow/platforms/sky130hs
+set res ~/Desktop/openroad/OpenROAD-flow-scripts/flow/results/sky130hs/adas_v2/base
 
 puts "\n=== STAGE 3_5: Detailed Placement ==="
 
