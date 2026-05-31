@@ -1,4 +1,4 @@
-> ⚠️ **Disclaimer:** This chip design was created through vibecoding — an agentic AI-driven methodology where AI agents collaboratively performed architecture, RTL design, verification, synthesis, and physical implementation. This is an experimental approach to silicon design. Review and validate before production use.
+> ⚠️ **Disclaimer:** This chip design was created through an AI-orchestrated design methodology where autonomous AI agents collaboratively performed architecture, RTL design, verification, synthesis, and physical implementation. This is an experimental approach to silicon design. Review and validate before production use.
 
 ---
 
